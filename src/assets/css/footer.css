@@ -1,0 +1,62 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.footer {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 20px;
+  margin-top: auto;
+}
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.footer .container .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.footer .container .row .col-footer-2 {
+  flex: 0 0 auto;
+  width: 50%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.footer .container .row .col-footer-2 h5 {
+  color: whitesmoke;
+}
+.footer .container .row .col-footer-2 ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.footer .container .row .col-footer {
+  flex: 0 0 auto;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.footer .container .row .col-footer h5 {
+  color: whitesmoke;
+}
+.footer .container .row .col-footer ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.footer .container hr {
+  border-color: whitesmoke;
+}
+.footer .container .text-center {
+  text-align: center;
+}
+
+/*# sourceMappingURL=footer.css.map */

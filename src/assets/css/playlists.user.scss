@@ -1,0 +1,83 @@
+$color_1: #333;
+$color_2: #fff;
+$background-color_1: #f9f9f9;
+$background-color_2: #fff;
+$background-color_3: #007bff;
+$background-color_4: #0056b3;
+
+.playlist-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: $background-color_1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: $color_1;
+  }
+}
+.playlist-list {
+  margin-bottom: 20px;
+}
+.playlist-item {
+  background-color: $background-color_2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+
+  button {
+    padding: 10px 20px;
+    background-color: $background-color_3;
+    color: $color_2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: $background-color_4;
+    }
+  }
+}
+.add-playlist-form {
+  background-color: $background-color_2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  h3 {
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: $background-color_3;
+    color: $color_2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: $background-color_4;
+    }
+  }
+}

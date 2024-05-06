@@ -1,0 +1,100 @@
+// styles.scss
+
+// Variables
+$color_1: inherit;
+$font-family_1: "DM Sans", sans-serif;
+$background-color_1: #f2f5f7;
+$background-color_2: var(--header-bg);
+$background-color_3: transparent;
+$background-color_4: currentcolor;
+$background-color_5: #fff;
+$background-color_6: #bee5d3;
+
+// Mixin for hover effect
+@mixin hoverEffect($transitionTime, $backgroundColor) {
+  &:hover {
+    &:after {
+      transform: scaleX(1);
+    }
+  }
+  &:after {
+    transition: $transitionTime ease;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $backgroundColor;
+    transform: scaleX(0);
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+  }
+}
+
+// Header styles
+.header-outer {
+  position: sticky;
+  top: calc(var(--header-height-difference) * -1);
+  display: flex;
+  align-items: center;
+  background-color: $background-color_2;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.header-inner {
+  height: var(--header-inner-height);
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-logo {
+  img {
+    display: block;
+    height: calc(var(--header-inner-height) - 5px);
+  }
+}
+
+.header-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  a {
+    font-size: 1.125rem;
+    color: $color_1;
+    margin-left: 1.75rem;
+    position: relative;
+    font-weight: 500;
+    display: none;
+    text-decoration: none;
+    @include hoverEffect(0.25s, $background-color_4);
+  }
+  button {
+    font-size: 1.125rem;
+    color: $color_1;
+    margin-left: 1.75rem;
+    position: relative;
+    font-weight: 500;
+    border: 0;
+    background-color: $background-color_3;
+    padding: 0;
+    @include hoverEffect(0.25s, $background-color_4);
+  }
+}
+
+// Media query for responsive navigation
+@media (min-width: 800px) {
+  .header-navigation {
+    a {
+      display: inline-block;
+    }
+    button {
+      display: none;
+    }
+  }
+}
