@@ -1,8 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+
+export const renderComponent = (Component) => {
+  render(<Component />);
+};
+
+// Reusable test function to check if a specific text is present in the component
+export const checkText = (text) => {
+  expect(screen.getByText(text)).toBeInTheDocument();
+};

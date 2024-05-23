@@ -17,6 +17,7 @@ const Header = () => {
     const logoutUser = () => {
         localStorage.removeItem('jwt');
         localStorage.removeItem('user');
+        localStorage.removeItem('id');
         window.location.href = '/';
     }
 

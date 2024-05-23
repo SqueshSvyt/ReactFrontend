@@ -9,7 +9,6 @@ const ProfileCard = () => {
   useEffect(() => {
     // Retrieve user data from localStorage
     const userData = localStorage.getItem('user');
-
     // If user data exists, parse it and set the user state
     if (userData) {
       const parsedUser = JSON.parse(userData);

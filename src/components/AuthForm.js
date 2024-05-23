@@ -31,6 +31,8 @@ const AuthForm = () => {
             if (data.token) {
                 localStorage.setItem('jwt', data.token);
                 localStorage.setItem('user', JSON.stringify(data.user));
+                localStorage.setItem('id', JSON.stringify(data.user.id));
+                console.log(data)
                 login();
                 window.location.href = '/';
             } else {

@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 
 const EditProfileForm = () => {
-  const [user, setUser] = useState(null)
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -12,7 +11,7 @@ const EditProfileForm = () => {
   useEffect(() => {
     // Retrieve user data from local storage
     const userData = localStorage.getItem('user');
-    setUser(userData)
+    console.log(userData)
     if (userData) {
       const parsedUser = JSON.parse(userData);
       // Set initial form data with user data
@@ -31,10 +30,11 @@ const EditProfileForm = () => {
   };
 
   const handleSubmit = (event) => {
+    const userId = localStorage.getItem('id');
     event.preventDefault();
     // Make API call to edit profile
-    fetch(`http://localhost:8000/api/users/${user.id}/`, {
-      method: 'PUT',
+    fetch(`http://localhost:8000/api/users/${userId}/`, {
+      method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
       },
